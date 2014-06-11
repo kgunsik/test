@@ -3,30 +3,67 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.min.css"/>
     <style>
         * {margin: 0px; padding: 0px}
-        div
-        {
-            margin: 5px; padding: 3px;
-            border: 3px solid black;
-            border-radius: 10px;
-        }
-        ul{outline-style:none;}
-        img{width: 638px; height: 220px}
+        .sliderContainer{position: relative; width: 600px; height: 220px}
+
+        .sliderPanel{width: 3000px; position: relative}
+        .sliderImg{float: left; width: 600px; height: 220px}
+
+        .sliderTextPanel{position: absolute; top: 100px; left: 50px}
+        .sliderText{position: absolute}
+
+        .controlPanel{position: absolute; top:180px; left: 270px; height: 16px; overflow: hidden}
+        .controlBtn{width: 16px; height: 46px; position: relative; float: left; cursor: pointer; background:url("images/att.png") }
+        .controlBtn:hover{top:-16px}
+        .controlBtn:active{top:-32px}
     </style>
-    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"/>
     <script type="text/javascript" src="js/jquery.innerfade.js"></script>
-    <!--<script type="text/javascript" src="js/greenShock/uncompressed/TimelineMax.js"></script>-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js"></script>
-    <script type="text/javascript" src="Hello.js"></script>
+    <script type="text/javascript" src="js/Hello.js"></script>
 </head>
 <body>
-    <ul id="innerFade">
-        <li><img src="images/ggbg.gif"></li>
-        <li><img src="images/rt_arch.jpg"></li>
-        <li><img src="images/km.jpg"></li>
-        <li><img src="images/tuev.jpg"></li>
-        <li><img src="images/whizzkids.gif"></li>
-    </ul>
+    <h1>Slider Demo</h1>
+    <div class="sliderContainer">
+        <div class="sliderPanel">
+            <img class="sliderImg" src="images/ggbg.gif">
+            <img class="sliderImg" src="images/km.jpg">
+            <img class="sliderImg" src="images/rt_arch.jpg">
+            <img class="sliderImg" src="images/tuev.jpg">
+            <img class="sliderImg" src="images/whizzkids.gif">
+        </div>
+        <div class="sliderTextPanel">
+            <div class="sliderText">
+                <h1>Image1</h1>
+                <p>sdfsdfsdfsdfsdf sdfsdfsdf </p>
+            </div>
+            <div class="sliderText">
+                <h1>Image1</h1>
+                <p>sdfsdfsdfsdfsdf sdfsdfsdf </p>
+            </div>
+            <div class="sliderText">
+                <h1>Image1</h1>
+                <p>sdfsdfsdfsdfsdf sdfsdfsdf </p>
+            </div>
+            <div class="sliderText">
+                <h1>Image1</h1>
+                <p>sdfsdfsdfsdfsdf sdfsdfsdf </p>
+            </div>
+            <div class="sliderText">
+                <h1>Image1</h1>
+                <p>sdfsdfsdfsdfsdf sdfsdfsdf </p>
+            </div>
+        </div>
+        <div class="controlPanel">
+            <div class="controlBtn"></div>
+            <div class="controlBtn"></div>
+            <div class="controlBtn"></div>
+            <div class="controlBtn"></div>
+            <div class="controlBtn"></div>
+        </div>
+    </div>
 </body>
 </html>
